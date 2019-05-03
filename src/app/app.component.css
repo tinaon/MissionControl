@@ -1,0 +1,79 @@
+mat-toolbar {
+    display: flex;
+}
+
+mat-toolbar > *{
+    margin: 0 10px;
+}
+
+.vstsRepoIcon {
+    height:17px;
+    position: relative;
+    top:4px;
+}
+
+.repo {
+    color:rgba(140, 140, 140, 0.87);
+    text-align: center;
+    font-size: 13px;
+}
+
+.header-icon{
+    font-size: 40px;  
+    position: absolute;  
+    top: 12px;
+}
+
+.activePullRequests{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.example-card {
+    max-width: 400px;
+    margin:20px;
+    min-width: 400px;
+  }
+
+  .example-card:hover{
+      cursor: pointer;
+      box-shadow: 0 0 11px rgba(33,33,33,.2);
+  }
+
+  .example-header-image {
+    background-size: cover;
+  }
+
+
+ 
+.mat-card{
+display:flex;
+flex-direction: column;
+}
+
+.mat-card-header {
+display: flex;
+flex-direction: row;
+flex-shrink: 0; 
+text-align: center;
+width:100%;
+}
+
+.mat-card-header-text {
+    width:100% !important;
+}
+
+.mat-card-content{
+flex-grow: 1;
+overflow: auto; 
+}
+
+.mat-card-footer{
+    background-color: #F8F8F8;
+    padding:5px;
+    text-align: left;
+}
+
+.mat-card-footer mat-icon{
+    margin: 0 10px;
+}
