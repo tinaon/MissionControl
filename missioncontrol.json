@@ -1,0 +1,11 @@
+{
+    "pacCode": "",
+    "queries": {
+        "builds": "",
+        "pullRequests": "",
+        "workInProgress": "",
+        "workAwaitingTest": "",
+        "workInTest": "",
+        "workAwaitingRelease": ""
+    }
+}

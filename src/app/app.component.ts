@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { interval } from 'rxjs';
+import config from '../../missioncontrol.json';
 
 @Component({
   selector: 'app-root',
@@ -33,9 +34,9 @@ export class AppComponent {
   }
 
   getPullRequests() {
-    fetch("https://dev.azure.com/ominoreg/Geronimo/_apis/git/pullrequests", {
+    fetch(config.queries.pullRequests, {
       headers: new Headers({
-        'Authorization': 'Basic ' + 'OmJjbXhzMnR6dHB2MnJzcjRoejN6cTVuMmd5cWV4ZmZ1M3Vjd3A3NTVhb2RraWhxamI0YXE='
+        'Authorization': 'Basic ' + config.pacCode
       })
     })
     .then(data => {
@@ -48,9 +49,9 @@ export class AppComponent {
 
   getBuilds()
   {
-    fetch("https://dev.azure.com/ominoreg/Geronimo/_apis/build/builds?maxbuildsperdefinition=1", {
+    fetch(config.queries.builds, {
       headers: new Headers({
-        'Authorization': 'Basic ' + 'OmJjbXhzMnR6dHB2MnJzcjRoejN6cTVuMmd5cWV4ZmZ1M3Vjd3A3NTVhb2RraWhxamI0YXE='
+        'Authorization': 'Basic ' + config.pacCode
       })
     })
     .then(data => {
@@ -63,9 +64,9 @@ export class AppComponent {
 
   getWorkInProgress()
   {
-    fetch("https://dev.azure.com/ominoreg/geronimo/geronimo%20team/_apis/wit/wiql/a6032030-2ddc-4d58-9fd0-9b0f8103d9d3", {
+    fetch(config.queries.workInProgress, {
       headers: new Headers({
-        'Authorization': 'Basic ' + 'OmJjbXhzMnR6dHB2MnJzcjRoejN6cTVuMmd5cWV4ZmZ1M3Vjd3A3NTVhb2RraWhxamI0YXE='
+        'Authorization': 'Basic ' + config.pacCode
       })
     })
     .then(data => {
@@ -78,9 +79,9 @@ export class AppComponent {
 
   getWorkAwaitingTest()
   {
-    fetch("https://dev.azure.com/ominoreg/geronimo/geronimo%20team/_apis/wit/wiql/51423a08-5d39-4e91-90eb-adec6f7b1d50", {
+    fetch(config.queries.workAwaitingTest, {
       headers: new Headers({
-        'Authorization': 'Basic ' + 'OmJjbXhzMnR6dHB2MnJzcjRoejN6cTVuMmd5cWV4ZmZ1M3Vjd3A3NTVhb2RraWhxamI0YXE='
+        'Authorization': 'Basic ' + config.pacCode
       })
     })
     .then(data => {
@@ -93,9 +94,9 @@ export class AppComponent {
 
   getWorkInTest()
   {
-    fetch("https://dev.azure.com/ominoreg/geronimo/geronimo%20team/_apis/wit/wiql/d6b77c70-b6a9-49cc-adac-994ff6711be3", {
+    fetch(config.queries.workInTest, {
       headers: new Headers({
-        'Authorization': 'Basic ' + 'OmJjbXhzMnR6dHB2MnJzcjRoejN6cTVuMmd5cWV4ZmZ1M3Vjd3A3NTVhb2RraWhxamI0YXE='
+        'Authorization': 'Basic '+ config.pacCode
       })
     })
     .then(data => {
@@ -108,9 +109,9 @@ export class AppComponent {
 
   getWorkAwaitingRelease()
   {
-    fetch("https://dev.azure.com/ominoreg/geronimo/geronimo%20team/_apis/wit/wiql/b13b9365-2d31-4d1a-b873-e8b6dafea173", {
+    fetch(config.queries.workAwaitingRelease, {
       headers: new Headers({
-        'Authorization': 'Basic ' + 'OmJjbXhzMnR6dHB2MnJzcjRoejN6cTVuMmd5cWV4ZmZ1M3Vjd3A3NTVhb2RraWhxamI0YXE='
+        'Authorization': 'Basic ' + config.pacCode
       })
     })
     .then(data => {
