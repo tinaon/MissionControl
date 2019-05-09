@@ -1,5 +1,6 @@
 mat-toolbar {
     display: flex;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,.5));
 }
 
 mat-toolbar > *{
@@ -76,4 +77,9 @@ overflow: auto;
 
 .mat-card-footer mat-icon{
     margin: 0 10px;
+}
+
+.mat-toolbar{
+    background: #202124;
+    color: rgb(255, 255, 255);
 }
