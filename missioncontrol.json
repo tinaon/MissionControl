@@ -6,6 +6,7 @@
         "workInProgress": "",
         "workAwaitingTest": "",
         "workInTest": "",
-        "workAwaitingRelease": ""
+        "workAwaitingRelease": "",
+        "workAwaitingPandas": ""
     }
 }

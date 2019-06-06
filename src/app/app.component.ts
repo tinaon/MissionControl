@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { interval } from 'rxjs';
+
 import config from '../../missioncontrol.json';
 
 @Component({
@@ -15,6 +16,7 @@ export class AppComponent {
   workAwaitingTest: Array<any>;
   workInTest: Array<any>;
   workAwaitingRelease: Array<any>;
+  workAwaitingPandas: Array<any>;
   wipLimit: number =  5;
 
   constructor() {
@@ -24,11 +26,13 @@ export class AppComponent {
     this.getWorkAwaitingTest();
     this.getWorkInTest();
     this.getWorkAwaitingRelease();
+    this.getWorkAwaitingPandas();
 
     interval(1000 * 120).subscribe(x => this.getWorkInProgress());
     interval(1000 * 120).subscribe(x => this.getWorkAwaitingRelease());
     interval(1000 * 120).subscribe(x => this.getWorkAwaitingTest());
     interval(1000 * 120).subscribe(x => this.getWorkInTest());
+    interval(1000 * 120).subscribe(x => this.getWorkAwaitingPandas());
     interval(1000 * 60).subscribe(x => this.getPullRequests());
     interval(1000 * 30).subscribe(x => this.getBuilds());
   }
@@ -122,6 +126,21 @@ export class AppComponent {
     });
   }
 
+  getWorkAwaitingPandas()
+  {
+    fetch(config.queries.workAwaitingPandas, {
+      headers: new Headers({
+        'Authorization': 'Basic ' + config.pacCode
+      })
+    })
+    .then(data => {
+      return data.json();
+    })
+    .then(res => {
+      this.workAwaitingPandas = res.workItems;
+    });
+  }
+
   getAgeOfPullRequest(pullRequest: any): number {
     return Math.round(Math.abs(new Date().getTime() - new Date(pullRequest.creationDate).getTime()) / 36e5);
   }
@@ -135,7 +154,7 @@ export class AppComponent {
   }
 
   getBuildStatusColour(build:any){
-    if(build.status == 'completed') {
+    if(build.status == 'completed' && build.result != 'failed') {
       return 'limegreen'
     }
 

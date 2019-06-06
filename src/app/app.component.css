@@ -1,6 +1,7 @@
 mat-toolbar {
     display: flex;
-    filter: drop-shadow(0 2px 4px rgba(0,0,0,.5));
+    background: #F8F8F8 !important;
+    color:black !important;
 }
 
 mat-toolbar > *{
@@ -82,4 +83,32 @@ overflow: auto;
 .mat-toolbar{
     background: #202124;
     color: rgb(255, 255, 255);
+}
+
+
+/* Colours */
+
+.grey {
+    color: #202124;
+    background-color: #202124;
+}
+
+.red {
+    color: #e01a4f;
+    background-color: #e01a4f;
+}
+
+.blue {
+    color: #008dd5;
+    background-color: #008dd5;
+}
+
+.yellow {
+    color: #f9c22e;
+    background-color: #f9c22e;
+}
+
+.white {
+    color: #eef0f2;
+    background-color: #eef0f2;
 }
