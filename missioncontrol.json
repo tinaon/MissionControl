@@ -1,12 +1,12 @@
 {
-    "pacCode": "",
+    "pacCode": "OmJjbXhzMnR6dHB2MnJzcjRoejN6cTVuMmd5cWV4ZmZ1M3Vjd3A3NTVhb2RraWhxamI0YXE=",
     "queries": {
-        "builds": "",
-        "pullRequests": "",
-        "workInProgress": "",
-        "workAwaitingTest": "",
-        "workInTest": "",
-        "workAwaitingRelease": "",
-        "workAwaitingPandas": ""
+        "builds": "https://dev.azure.com/ominoreg/Geronimo/_apis/build/builds?maxbuildsperdefinition=1",
+        "pullRequests": "https://dev.azure.com/ominoreg/Geronimo/_apis/git/pullrequests",
+        "workInProgress": "https://dev.azure.com/ominoreg/geronimo/geronimo%20team/_apis/wit/wiql/a6032030-2ddc-4d58-9fd0-9b0f8103d9d3",
+        "workAwaitingTest": "https://dev.azure.com/ominoreg/geronimo/geronimo%20team/_apis/wit/wiql/51423a08-5d39-4e91-90eb-adec6f7b1d50",
+        "workInTest": "https://dev.azure.com/ominoreg/geronimo/geronimo%20team/_apis/wit/wiql/d6b77c70-b6a9-49cc-adac-994ff6711be3",
+        "workAwaitingRelease": "https://dev.azure.com/ominoreg/geronimo/geronimo%20team/_apis/wit/wiql/b13b9365-2d31-4d1a-b873-e8b6dafea173",
+        "workAwaitingPandas": "https://dev.azure.com/ominoreg/Koalas/Koalas%20team/_apis/wit/wiql/64e00fc9-1eda-4da2-abb0-b89830ae5383"
     }
 }
