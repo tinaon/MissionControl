@@ -45,7 +45,7 @@
   <div class="builds" style="float:left;width:33%;margin:10px;border-right: 1px solid #f5f5f5;padding-right: 20px;">
       <mat-icon style="font-size: 30px;margin:20px;">build</mat-icon>
       <div *ngIf="builds">
-        <mat-card *ngFor="let build of getRunningBuilds()" class="example-card" [style.background-color]="getBuildStatusColour(build)">
+        <mat-card *ngFor="let build of getRunningBuilds()" class="example-card" style="margin-left:auto;margin-right:auto;" [style.background-color]="getBuildStatusColour(build)">
           <mat-card-header>   
               <div mat-card-avatar class="example-header-image"
              ><mat-icon style="color:'{{getBuildStatusColour(build)}}'">warning</mat-icon></div>
