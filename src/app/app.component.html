@@ -76,25 +76,25 @@
     <!-- <mat-icon style="font-size: 30px;margin:20px;">note</mat-icon> -->
     <p style="font-size:50px;">🐼</p>
     <button *ngIf="workInProgress" mat-raised-button color="primary" matBadge="{{workInProgress.length}}"
-    matBadgePosition="before" matBadgeSize="large" matBadgeColor="accent" style="width:25vw; margin:10px;height:70px" [style.background-color]="workInProgress.length > 3 ? 'red' : 'none'">
+    matBadgePosition="before" matBadgeSize="large" matBadgeColor="accent" style="width:25vw; margin:10px;height:70px" [style.background-color]="workInProgress.length > 3 ? 'red' : ''">
     Cards In Development
   </button> <br/>
   <button *ngIf="workAwaitingTest" mat-raised-button color="primary" matBadge="{{workAwaitingTest.length}}"
-    matBadgePosition="before" matBadgeSize="large" matBadgeColor="accent" style="width:25vw;margin:10px;height:70px" [style.background-color]="workAwaitingTest.length > 3 ? 'red' : 'none'">
+    matBadgePosition="before" matBadgeSize="large" matBadgeColor="accent" style="width:25vw;margin:10px;height:70px" [style.background-color]="workAwaitingTest.length > 3 ? 'red' : ''">
     Cards Awaiting Test
   </button> <br/>
   <button *ngIf="workInTest" mat-raised-button color="primary" matBadge="{{workInTest.length}}"
-    matBadgePosition="before" matBadgeSize="large" matBadgeColor="accent" style="width:25vw;margin:10px;height:70px" [style.background-color]="workInTest.length > 3 ? 'red' : 'none'">
+    matBadgePosition="before" matBadgeSize="large" matBadgeColor="accent" style="width:25vw;margin:10px;height:70px" [style.background-color]="workInTest.length > 3 ? 'red' : ''">
     Cards In Test
   </button> <br/>
   <button *ngIf="workAwaitingRelease" mat-raised-button color="primary" matBadge="{{workAwaitingRelease.length}}"
-    matBadgePosition="before" matBadgeSize="large" matBadgeColor="accent" style="width:25vw;margin:10px;height:70px" [style.background-color]="workAwaitingRelease.length > 3 ? 'red' : 'none'">
+    matBadgePosition="before" matBadgeSize="large" matBadgeColor="accent" style="width:25vw;margin:10px;height:70px" [style.background-color]="workAwaitingRelease.length > 3 ? 'red' : ''">
     Cards Awaiting Deployment
   </button>
 
   <p style="font-size:50px;">🐨</p>
   <button *ngIf="workAwaitingPandas" mat-raised-button color="primary" matBadge="{{workAwaitingPandas.length}}"
-  matBadgePosition="before" matBadgeSize="large" matBadgeColor="accent" style="width:25vw;margin:10px;height:70px" [style.background-color]="workAwaitingPandas.length >= 3 ? 'red' : 'none'">
+  matBadgePosition="before" matBadgeSize="large" matBadgeColor="accent" style="width:25vw;margin:10px;height:70px" [style.background-color]="workAwaitingPandas.length >= 3 ? 'red' : ''">
   Cards Awaiting Pandas
 </button>
 </div>

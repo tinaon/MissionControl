@@ -63,6 +63,7 @@ export class AppComponent {
     })
     .then(res => {
       this.builds = res.value;
+      this.builds.sort((x,y) => (x.definition.name > y.definition.name) ? 1 : -1);
     });
   }
 
